@@ -139,4 +139,8 @@ img {
     width: 120px;
   }
 }
+@media screen and (max-width: 500px) {
+  .section-team .single-person .person-info .full-name {
+    font-size: 20px;
+  }
 /*# sourceMappingURL=team-styles.css.map */
