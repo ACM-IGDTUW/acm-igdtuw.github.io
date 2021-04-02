@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ACM IGDTUW: Past Workshops</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/emp.css">
+    <link rel="stylesheet" href="css/header/header-style.css">
+	<link rel="stylesheet" href="css/footer/footer-style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+</head>
+<style>
+    body{
+		background-color: #04021a;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='432' height='432' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23542009' stroke-width='2.4'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23c73616'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+
+	}
+
+   header nav ul li a{
+       display: block;
+       padding: 0px 13.76px;
+   }
+   @media only screen and (max-width: 800px){
+       .nav-container header{
+           padding: 27.52px;
+           font-size: 13.76px;
+       }
+   }
+
+        /* scroll to the top */
+    #btnScrollToTop {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0, 0.25);
+        color: rgb(7, 7, 7);
+        outline: none;
+    }
+
+    #btnScrollToTop:active {
+        background:rgba(51, 51, 59, .2)
+    }
+</style>
+<body>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <!-- Team -->
+    <section id="team" class="pb-5">
+        <div class="container">
+            <h5 class="section-title h1">PAST WORKSHOPS</h5>
+
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul id="filter-list">
+                        <li class="filter active" data-filter="0">All</li>
+                        <li class="filter" data-filter="1">Open Source</li>
+                        <li class="filter" data-filter="2">Cyber security</li>
+                        <li class="filter" data-filter="3">Machine Learning</li>
+                        <li class="filter" data-filter="4">Web Development</li>
+                        <li class="filter" data-filter="5">Competetive</li>
+                        <li class="filter" data-filter="6">Android</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <!--OPEN SOURCE-->
+
+            <!-- Team member -->
+            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/hacktober.png" alt="card image"></p>
+                                    <h4 class="card-title">Introduction to Open Source and Hacktoberfest</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title"></h4>
+                                    <p class="card-text"></p>  
+                                    <p><img class=" img-fluid" src="img/past-workshops/git1.jpg" alt="card image"></p>
+                                 
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git2.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Beyond Hacktoberfest- Gsoc,Outreachy</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git4.jpg" alt="card image"></p>
+                                        <p class="card-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git3.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Google Summer of Code</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title"></h4>
+                                    <p><img class=" img-fluid" src="img/past-workshops/git5.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git4.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Open Source Workshop </h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/comp5.jpg" alt="card image"></p>
+                                    <h4 class="card-title"></h4>
+                                   
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ./Team member -->
+            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/androidhands.png" alt="card image"></p>
+                                    <h4 class="card-title">Session on Android App Development</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/and3.jpg" alt="card image"></p>
+                                    <h4 class="card-title"></h4>
+                                    <p class="card-text"></p>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team member --><!---cybersecurity card-->
+            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyber1.png" alt="card image"></p>
+                                    <h4 class="card-title">Expert Talk on Cybersecurity</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyber2.jpg" alt="card image"></p>
+                                    <h4 class="card-title">.</h4>
+                                    <p class="card-text">. .</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+           
+            <!-- ./Team member -->
+            <!-- Team member --><!--webD card-->
+            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/webd1.png" alt="card image"></p>
+                                    <h4 class="card-title">An Intro to Web Development with Tanya and Soumya</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/3.png" alt="card image"></p>
+                                    <h4 class="card-title">.</h4>
+                                    <p class="card-text"></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+           
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git6.png" alt="card image"></p>
+                                    <h4 class="card-title">Github on your Tips</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/git10.png" alt="card image"></p>
+                                    <h4 class="card-title">.</h4>
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <div class="itemBox 5 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cp1.png" alt="card image"></p>
+                                    <h4 class="card-title">Interview Preparation  and Competitive Programming session</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                           
+                                    <p><img class=" img-fluid" src="img/past-workshops/comp5.jpg" alt="card image"></p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- ./Team member -->
+            <div class="itemBox 5 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/comp7.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Tips and tricks for learning Competitive</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center ">
+                                    <p><img class=" img-fluid" src="img/past-workshops/comp4.jpg" alt="card image"></p>
+                                    <h4 class="card-title">.</h4>
+                                    
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ./Team member -->
+            <!-- ./Team member -->
+            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyberweb.png" alt="card image"></p>
+                                    <h4 class="card-title">Cybersecurity- Web Application security</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center ">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyber1.jpg" alt="card image"></p>
+                                    <h4 class="card-title">.</h4>
+                                   
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- ./Team member -->
+            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyber3.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Cybersecurity.. How to start?</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/cyber5.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Team member -->
+            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/py1.png" alt="card image"></p>
+                                    <h4 class="card-title">Machine learning using python </h4>
+                                    <p class="card-text"></p>
+                                  <!--   <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <p><img class=" img-fluid" src="img/past-workshops/py3.jpeg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/summer3.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Summer Workshop on Machine Learning</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                   
+                                    <p><img class=" img-fluid" src="img/past-workshops/summer1.jpg" alt="card image"></p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/deepl.png" alt="card image"></p>
+                                    <h4 class="card-title">Introduction to Deep Learning </h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                   
+                                    <p><img class=" img-fluid" src="img/past-workshops/dl1.jpeg" alt="card image"></p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/introml.png" alt="card image"></p>
+                                    <h4 class="card-title">An Intro to Machine Learning Algorithms </h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                 
+                                    <p><img class=" img-fluid" src="img/past-workshops/ml1.png" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/mlhands.png" alt="card image"></p>
+                                    <h4 class="card-title">Hands on ML Workshop</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                 
+                                    <p><img class=" img-fluid" src="img/past-workshops/backend1.jpg" alt="card image"></p>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+           
+            <!-- Team member -->
+            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/web1.png" alt="card image"></p>
+                                    <h4 class="card-title">Full-Stack Web Development with backend using Ruby on Rails</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                   
+                                    <p><img class=" img-fluid" src="img/past-workshops/frontend2.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/web4.png" alt="card image"></p>
+                                    <h4 class="card-title">Web development and scopes</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                   
+                                    <p><img class=" img-fluid" src="img/past-workshops/web10.png" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./Team member -->
+            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/comp6.jpg" alt="card image"></p>
+                                    <h4 class="card-title">Android FAQ Session by seniors</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    
+                                    <p><img class=" img-fluid" src="img/past-workshops/android.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Team member -->
+            
+            <!-- Team member --><!--Android card-->
+            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/android4.png" alt="card image"></p>
+                                    <h4 class="card-title">BUILD YOUR OWN APP- Android development</h4>
+                                    <p class="card-text"></p>
+                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    
+                                    <p><img class=" img-fluid" src="img/past-workshops/and3.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ./Team member -->
+            <!-- Team member -->
+            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="img/past-workshops/frontend2.jpg" alt="card image"></p>
+                                    <h4 class="card-title">ACM WebD session</h4>
+                                    <p class="card-text"></p>
+                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                  
+                                    <p><img class=" img-fluid" src="img/past-workshops/backend2.jpg" alt="card image"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+        </div>
+    </section>
+    <!-- Team -->
+
+
+        <script src="js/emp-js/jquery-3.3.1.min.js"></script>
+        <script src="js/emp-js/popper.min.js"></script>
+        <script src="js/emp-js/jquery.filterizr.min.js"></script>
+        <script src="js/emp-js/script.js"></script>
+        <script src="js/main.js"></script>>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.filter').click(function() {
+                    const value = $(this).attr('data-filter');
+                    if (value == '0') {
+                        $('.itemBox').show('1000');
+                    } else {
+                        $('.itemBox').not('.' + value).hide('1000');
+                        $('.itemBox').filter('.' + value).show('1000');
+                    }
+                })
+            });
+        </script>
+        <script>
+            $(function() {
+                $(document).scroll(function() {
+                    var $nav = $("#mainNavbar");
+                    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                });
+            });
+        </script>
+
+
+        </script>
+
+           <!-- scroll to top button -->
+    <button id = "btnScrollToTop">
+        <i class="material-icons">arrow_upward</i>
+    </button>
+
+    <script>
+        const btnScrollToTop = document.querySelector("#btnScrollToTop");
+         btnScrollToTop.addEventListener("click", function () {
+            window.scrollTo(0,0); }
+        );
+   </script>
+</body>
+
+</html>
