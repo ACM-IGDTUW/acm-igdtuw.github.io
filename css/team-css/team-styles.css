@@ -103,18 +103,13 @@ img {
   color: #fff;
 }
 
-.fa-linkedin-in {
-  color: #5AB2CD;
+.fab {
+  color: #fff;
 }
 
-.fa-github {
-  color: #5AB2CD;
+.fab:hover {
+  color: #000;
 }
-
-.fa-user-circle {
-  color: #5AB2CD;
-}
-
 
 .col-sm-6 {
   margin: 0 auto;
@@ -139,8 +134,4 @@ img {
     width: 120px;
   }
 }
-@media screen and (max-width: 500px) {
-  .section-team .single-person .person-info .full-name {
-    font-size: 20px;
-  }
 /*# sourceMappingURL=team-styles.css.map */
