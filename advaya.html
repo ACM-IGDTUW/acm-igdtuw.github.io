@@ -5,19 +5,38 @@
 
 <!-- Bootstrap file for button -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/header/header-style.css">
+<link rel="stylesheet" href="css/footer/footer-style.css">
 <link rel="stylesheet" href="advaya/style.css">
+
 <!-- For events -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="js/main.js"></script>
 
 </head>
 <body>
 
-
+	<div class="nav-container">
+		<header>
+		  <a class="logo" href="index.html">ACM IGDTUW</a>
+		  <nav class="nav-itself">
+			<ul>
+			  <li><a class="nav-li" href="events.html">Events</a></li>
+			  <li><a class="nav-li" href="team.html">Executive Body</a></li>
+			  <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
+			</ul>
+		  </nav>  
+		</header>
+		</div>
 
 <div class="container">
-	
+
+
+
+
+
 	<div class="header">
 		<div class="split right">
 			<div class="timer_wrapper">
@@ -37,8 +56,9 @@
 	
 	</div>
 
-	<h2 class="border-line">2021</h2>
+	<h2 class="border-line">2021</h2>	
  <div class="timeline-event-wrapper">
+
 	<div class="timeline-event">
 		<div class="timeline-event-img">
 			<a href="#" onclick="if (!lightboxLoaded) return false" class="w-fancybox">
@@ -138,6 +158,29 @@
   
 </div>
 
+<section class="footer">
+	<div class="footer-container">
+	  <div class="footer-images">
+		<img src="img/igdtuwlogo.jpg" alt="IGDTUW Logo">  
+	  </div>
+	  <p class="footer-desc desc">ACM Student Chapter at IGDTUW is the technical society at Department of Information Technology, IGDTUW. It is student driven society where active student members organize plethora of events during the semester.</p>
+	  <div class="footer-social">
+		<h1 class="title footer-social-title">Reach out to us!</h1>
+		<ul>
+		  <li><a data-toggle="tooltip" data-placement="top" title="Follow us on Facebook" class="soc_tooltip" href="https://www.facebook.com/AcmStudentChaptersIGIT/" target="_blank"><img class="social-icon" src="assets/facebook-icon.svg" alt="Check out ACM IGDTUW on Facebook"></a></li>
+		  <li><a data-toggle="tooltip" data-placement="top" title="Follow us on LinkedIn" class="soc_tooltip"  href="https://www.linkedin.com/company/acm-student-chapter-igdtuw/"  target="_blank"><img class="social-icon" src="assets/linkedin-icon.svg" alt="Check out ACM IGDTUW on LinkedIn"></a></li>
+		  <li><a data-toggle="tooltip" data-placement="top" title="Follow us on Twitter" class="soc_tooltip"  href="https://twitter.com/AcmIgdtuw" target="_blank"><img class="social-icon" src="assets/twitter-icon.svg" alt="Check out ACM IGDTUW on Twitter"></a></li>
+		  <li><a data-toggle="tooltip" data-placement="top" title="Follow us on Instagram" class="soc_tooltip"  href="https://www.instagram.com/acm_igdtuw/" target="_blank"><img class="social-icon" src="assets/instagram-icon.svg" alt="Check out ACM IGDTUW on Instagram"></a></li>    
+		</ul>
+	  </div>  
+	</div>
+	</section>
+	<!-- COPYRIGHT SECTION BEGINS -->
+	<section class="copyright-section">
+		<p class="copyright-desc">Designed & Developed By ACM IGDTUW Student Chapter</p>
+	</section>
+	<!-- COPYRIGHT SECTION ENDS -->
+
 <script>
 let countDownDate = new Date("April 12 , 2021 18:00:00").getTime();
 
@@ -183,5 +226,6 @@ var x = setInterval(function () {
 
 
 </script>
+
 </body>
 </html>

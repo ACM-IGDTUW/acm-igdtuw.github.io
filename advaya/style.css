@@ -42,9 +42,16 @@ body {
   width: 50%;
   position: absolute;
 /*  z-index: 1;*/
-  top: 3%;
+  /* top: 19%; */
+  top: 5%;
   overflow-x: hidden;
   padding-top: 20px;
+}
+
+@media screen and (min-width: 800px) {
+ .split{
+   top: 10%;
+ } 
 }
 
 /* Control the left side */
