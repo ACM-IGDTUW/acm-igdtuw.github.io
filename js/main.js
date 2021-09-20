@@ -5,7 +5,7 @@ let header = $(`<div class="nav-container">
   <nav class="nav-itself">
     <ul>
       <li><a class="nav-li" href="events.html">Events</a></li>
-      <li><a class="nav-li" href="team.html">Executive Body</a></li>
+      <li><a class="nav-li" href="team.html">About Our Team</a></li>
       <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
     </ul>
   </nav>  
