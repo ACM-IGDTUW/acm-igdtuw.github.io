@@ -33,7 +33,7 @@
 
     body{
         height: 100vh;
-        font-family: 'Poppins', arial; 
+        font-family: 'Poppins', arial;
         font-size: .86rem;
         overflow-x: hidden !important;
         background-color: #04021a;
@@ -48,7 +48,7 @@
     p,
     section,
     a,
-    ul{  
+    ul{
         margin: 0;
         padding: 0;
     }
@@ -56,17 +56,17 @@
     ul{
         list-style-type: none;
     }
-    
+
     a{
         text-decoration: none;
     }
-    
+
     img{
         max-width: 100%;
         height: auto;
         display: block;
     }
-    
+
     .title{
         text-align: center;
         font-family: 'Poppins', serif;
@@ -83,13 +83,13 @@
     .white-title{
         color:  #fff;
     }
-    
+
     .desc{
         font-weight: 500;
         color: #e7dddd;
         text-align: center;
     }
-    section, 
+    section,
     .banner {
         padding: 0em 2em;
     }
@@ -98,7 +98,7 @@
         display: none;
     }
 
-    
+
     .about-acm,
     .about-acm-igdtuw,
     .highlights,
@@ -145,7 +145,7 @@
     .nav-container{
         a{
             color: #3FE4DB;
-            
+
         }
     }
     header{
@@ -164,10 +164,10 @@
             color: white;
             font-weight: bold;
         }
-    
+
         nav{
             ul{
-                display: flex;   
+                display: flex;
                li{
                 a{
                     display: block;
@@ -217,7 +217,7 @@
     .about-img-m{
         display: none;
        }
-    
+
     .links-container{
         a:hover,
         a:active{
@@ -236,13 +236,13 @@
         background:  rgba(51, 51, 59, 0.4);
     }
     .highlights-container ul li:hover{
-       
+
         background: rgba(230, 128, 45, 0.56);
         .highlight-item-desc,
         .highlight-item-title{
             color: #e1dfe7;
         }
-        transition: 0.2s ease-out;       
+        transition: 0.2s ease-out;
     }
     .highlight-icon-container{
         height: 100px;
@@ -291,7 +291,7 @@
         margin-bottom: 3em;
         margin-top: 1em;
         transition: 0.3s ease-out;
-    
+
     }
     .s-icon i{
         line-height: 70px;
@@ -380,7 +380,7 @@
       }
 
 /* ==========
-   Subteam Section 
+   Subteam Section
    ========== */
    .subteam-container{
     background: rgba(51, 51, 59, 0.4);
@@ -393,7 +393,7 @@
         margin: auto 0;
     }
     margin: auto 0;
-   } 
+   }
    .subteam-item{
         a{
             background: rgba(230, 128, 45, 0.56);
@@ -404,7 +404,7 @@
         }
     }
     .subteam-container:hover,
-    .subteam-container:active{   
+    .subteam-container:active{
         a:hover,
         a:active{
             font-weight: 600;
@@ -426,8 +426,8 @@
         margin: auto 0;
     }
     margin: auto 0;
-   } 
-   .links-container{       
+   }
+   .links-container{
         padding: 1em;
         text-align: center;
         line-height: 2;
@@ -451,7 +451,7 @@
             background: rgba(230, 128, 45, 0.56);
         }
     }
-   
+
 /* ==========
    Footer
    ========== */
@@ -472,7 +472,7 @@
             justify-content: center;
             padding-top: 1em;
             li{
-                margin: 0em 1em;;      
+                margin: 0em 1em;;
             }
             img{
                 height: 30px;
@@ -508,9 +508,9 @@
    }
    @media only screen and (min-width: 350px){
     .subteam-container,
-    .cl-container{
-        height: 320px;
-}
+//     .cl-container{
+//         height: 320px;
+// }
    }
    @media only screen and (min-width: 500px){
        .about-acm-igdtuw
@@ -540,7 +540,7 @@
     header{
         padding: 2em 8em;
     }
-   
+
     .teams-container ul{
         display: flex;
         flex-wrap: wrap;
@@ -566,12 +566,12 @@
             display: grid;
             grid-template-columns: 45% 50%;
             grid-column-gap: 1em;
-            place-content: center; 
+            place-content: center;
             img{
                 border-radius: 10px;
                 width: 300px;
                 display: block;
-            }           
+            }
         }
    }
    @media only screen and (min-width: 1000px){
@@ -630,8 +630,8 @@
             }
             li:hover{
                 background: rgba(5, 201, 201, 0.44);
-                border-radius: 100% 100% 100% 30%; 
-                
+                border-radius: 100% 100% 100% 30%;
+
             }
         }
         .row-2{
@@ -639,7 +639,7 @@
         }
         .inner-width{
             max-width: 1300px;
-    
+
         }
         .s-box{
             max-width: 30.33%;
@@ -658,8 +658,8 @@
             &:last-child{
                 height: 460px;
             }
-        }        
-        
+        }
+
         .testimonials-container ul li{
             margin: 2em 7em;
         }
@@ -667,7 +667,7 @@
             height: 150px;
             width: 150px;
             margin: 1em auto;
-        }    
+        }
 
         .subteam-container{
             border-radius: 13px;
@@ -704,7 +704,7 @@
             height: 300px;
             img{
                 width: 400px;
-            }           
+            }
         }
         .highlights-container ul li{
             max-width: 43.33%;
@@ -737,4 +737,3 @@
         }
 
        }
-
