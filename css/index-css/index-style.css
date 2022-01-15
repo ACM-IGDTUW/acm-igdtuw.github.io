@@ -573,9 +573,9 @@ header nav ul li a {
 
 @media only screen and (min-width: 350px) {
   .subteam-container,
-  .cl-container {
+/*  .cl-container {
     height: 320px;
-  }
+  }*/
 }
 
 @media only screen and (min-width: 500px) {
