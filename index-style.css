@@ -422,7 +422,7 @@ header nav ul li a {
 }
 
 /* ==========
-   Subteam Section 
+   Subteam Section
    ========== */
 .subteam-container {
   background: rgba(51, 51, 59, 0.4);
@@ -573,7 +573,7 @@ header nav ul li a {
 @media only screen and (min-width: 350px) {
   .subteam-container,
   .cl-container {
-    height: 320px;
+    height: 390px;
   }
 }
 
