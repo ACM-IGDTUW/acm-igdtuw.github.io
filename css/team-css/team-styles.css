@@ -33,9 +33,11 @@ body {
 }
 
 img {
-  width: 100%;
+  width: 100px;
+  height: 250px;
+  /* border-radius: 100%; */
+  /* background: rgba(51, 51, 59, 0.4); */
 }
-
 .section-team {
   padding: 80px 0;
 }
@@ -61,58 +63,6 @@ img {
   font-size: 2.45rem;
 }
 
-.section-team .single-person {
-  margin-top: 30px;
-  padding: 30px;
-  background: rgba(51, 51, 59, 0.4);
-  border-radius: 5px;
-}
-
-.section-team .single-person:hover {
-  background: rgba(230, 128, 45, 0.56);
-}
-
-.person-image {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  border: 4px dashed transparent;
-  background-size: cover;
-  background-position: center;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 50px auto;
-}
-
-.section-team .single-person:hover .person-image {
-  /*padding: 12px;*/
-  border: 4px dashed #fff;
-}
-
-.section-team .single-person .person-info .full-name {
-  margin-bottom: 10px;
-  font-size: 28px;
-  font-weight: 700;
-  color: rgba(5, 201, 201, 0.89);
-  font-family: 'Poppins', arial;
-}
-
-.section-team .single-person .person-info .speciality {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: rgba(12, 138, 138, 0.89);
-  font-family: 'Flaticon';
-  padding-bottom: .56em;
-}
-
-.section-team .single-person:hover .full-name,
-.section-team .single-person:hover .speciality {
-  color: #fff;
-}
-
 .fab {
   color: #fff;
 }
@@ -130,18 +80,132 @@ img {
   /* Added */
 }
 
-@media only screen and (max-width: 600px) {
-  .single-person {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (auto)[2];
-        grid-template-columns: repeat(2, auto);
-    grid-column-gap: 2em;
-  }
-  .person-image {
-    margin: auto;
-    height: 120px;
-    width: 120px;
-  }
-}
 /*# sourceMappingURL=team-styles.css.map */
+.team-block{
+  position:relative;
+}
+
+.team-block .inner-box{
+  position:relative;
+  padding:40px 70px 28px 0px;
+}
+
+.team-block .inner-box:before{
+  position:absolute;
+  content:'';
+  right:0px;
+  top:0px;
+  left:70px;
+  bottom:0px;
+  border-radius:10px;
+  background: rgba(51, 51, 59, 0.4);
+  /* background-color:#f5f5f5; */
+  -webkit-transition:all 600ms ease;
+  -moz-transition:all 600ms ease;
+  -ms-transition:all 600ms ease;
+  -o-transition:all 600ms ease;
+  transition:all 600ms ease;
+}
+
+.team-block .inner-box::after{
+  position:absolute;
+  content:'';
+  top:0px;
+  left:70px;
+  bottom:0px;
+  width:0%;
+  border-radius:10px;
+  -webkit-transition:all 600ms ease;
+  -moz-transition:all 600ms ease;
+  -ms-transition:all 600ms ease;
+  -o-transition:all 600ms ease;
+  transition:all 600ms ease;
+  background: rgba(230, 128, 45, 0.56);
+}
+
+.team-block .inner-box:hover::after{
+  width:81%;
+}
+
+.team-block .inner-box .social-icons{
+  position:absolute;
+  right:25px;
+  top:100px;
+  z-index:1;
+}
+
+.team-block .inner-box .social-icons li{
+  position:relative;
+  margin-bottom:20px;
+}
+
+.team-block .inner-box .social-icons li a{
+  position:relative;
+  color: rgba(12, 138, 138, 0.89);
+  font-size:18px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.social-icons i{
+  color: rgba(12, 138, 138, 0.89);
+}
+.team-block .inner-box:hover .lower-content h3,
+.team-block .inner-box:hover .social-icons i,
+.team-block .inner-box:hover .lower-content .designation{
+  color:#ffffff;
+}
+
+.team-block .inner-box .image{
+  position:relative;
+  z-index:1;
+  border-radius:10px;
+  background-color:#ffffff;
+  box-shadow:inset 0px 0px 35px rgba(0,0,0,0.20);
+}
+
+.team-block .inner-box .image img{
+  position:relative;
+  width:100%;
+  display:block;
+}
+
+.team-block .inner-box .lower-content{
+  position:relative;
+  text-align:left;
+  z-index:1;
+  padding:30px 15px 0px 110px;
+}
+
+.team-block .inner-box .lower-content h3{
+  position:relative;
+  color: rgba(12, 138, 138, 0.89);
+  font-size:18px;
+  font-weight:700;
+  line-height:1.3em;
+}
+
+.team-block .inner-box .lower-content h3{
+  position:relative;
+  color: rgba(12, 138, 138, 0.89);
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.team-block .inner-box .lower-content .designation{
+  position:relative;
+  margin-top:5px;
+  color:#777777;
+  font-size:14px;
+}
+
+.team-block.style-two .inner-box:hover .lower-content h3,
+.team-block.style-two .inner-box:hover .social-icons i{
+  color:#ffffff;
+}
+.social-icons i:hover{
+  color:#ffffff;
+}
