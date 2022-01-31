@@ -132,13 +132,15 @@ Copyright Section
 }
 
 @media only screen and (min-width: 1000px) {
-  section {
-    padding-left: 14em;
-    padding-right: 14em;
-  }
-  .footer {
+  section{
+    padding-left: 12em;
+    padding-right: 12em;
+}
+.footer{
     padding-top: 10em;
     padding-bottom: 10em;
-  }
+    padding-left: 14em;
+    padding-right: 14em;
+}
 }
 /*# sourceMappingURL=footer-style.css.map */

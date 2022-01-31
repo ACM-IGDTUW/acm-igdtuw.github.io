@@ -75,7 +75,7 @@
         font-size: 16px;
         color: #ddcdcd;
         text-transform: uppercase;
-        line-height: 50px;
+        line-height: 44px;
         text-align: center;
         border-radius: 25px;
         font-weight: 500;
@@ -222,12 +222,64 @@
     #btnScrollToTop:active {
         background:rgba(51, 51, 59, .2)
     }
+    
+    
+
+    @media (min-width: 648px) and (min-height: 600px) and (max-height: 714px){
+        .row {
+            position: fixed;
+            z-index:5;
+            left: 2rem;
+            top: 50%;
+            margin-top: -210px;
+            width: 13rem;
+        }
+        .navigation a {
+            line-height: 37px;
+        }
+
+        .event-cards , .section-title{ 
+            margin-left: 15rem;
+            padding: 0;
+        }
+        .footer, .copyright-section {
+            margin-left: 15rem;
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+    }
+
+    @media (min-width: 648px) and (min-height: 715px ) {
+        .row {
+            position: fixed;
+            z-index:5;
+            left: 2rem;
+            top: 50%;
+            margin-top: -260px;
+            width: 13rem;
+        }
+        .navigation a {
+            line-height: 44px;
+        }
+
+        .event-cards , .section-title { 
+            margin-left: 15rem;
+            padding: 0;
+        }
+        .footer, .copyright-section {
+            margin-left: 15rem;
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+    }
 </style>
+
 
 <body>
     <section>
         <div class="container">
             <h1 class="section-title">EVENTS</h1>
+
             <div class="row" style="text-align: center;">
                 <div class="navigation">
                         <a href="#" class="button active" data-filter="all">All</a>
@@ -242,15 +294,149 @@
                         <a href="#" class="button" data-filter="8">DS and ML</a>
                         <a href="#" class="button" data-filter="9">Advaya</a>
                         <a href="#" class="button" data-filter="10">APP Development</a>
+                        <a href="#" class="button" data-filter="11">Others</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section>
+
+    <section class="event-cards">
         <div class="container">
+
             <div class="boxesContainer">
+
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day6.jfif" alt="STEMathon" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 6&7)- STEMathon</h3>
+                        <p class="card-text">
+                            Main Guests/ Judges : Mr Prapanch Ramamoorthy, Mr Raghunath Kulkarni, Mr Aditya Oberai, Mr Ekansh Gupta <br><br>
+                             Host of the session : Tamanna Verma, Quanta Gupta, Rishita Gupta <br><br>
+                            Number of attendees : 50+
+                        </p>
+                        <a href="acm_events_main-main/38_Advaya2- STEMathon.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day5.jfif" alt="The Competitive Code" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 5)- The Competitive Code</h3>
+                        <p class="card-text">Main Guest:  Prateek Narang <br>
+                            Host of the session: Abhigya Verma <br>
+                            Number of attendees: 200+</p>
+                        <a href="acm_events_main-main/37_Advaya2- Competitive Code.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day4.jfif" alt="AR/VR: The Reality Check + Game Development
+                   " class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 4)- AR/VR: The Reality Check + Game Development
+                       </h3>
+                        <p class="card-text">Main Guest:  Pulkit Midha and Awal Raj Singh <br>
+                            Host of the session: Avni Uplabdhee <br>
+                            Number of attendees: 45+</p>
+                        <a href="acm_events_main-main/36_Advaya2- AR VR.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day3.jfif" alt=" Hey Alexa!" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 3)- Hey Alexa!</h3>
+                        <p class="card-text">Main Guest:  Sasha Makkar <br>
+                            Number of attendees: 80+</p>
+                        <a href="acm_events_main-main/35_Advaya2- Hey Alexa.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day2..jfif" alt="Enterprene'hers" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 2)- Enterprene'hers</h3>
+                        <p class="card-text"> Main Guest: Aman Dhattarwal <br>
+                                              Host of the session: Bhanupriya Sharma <br>
+                                              Number of attendees: 200+ <br>
+                            </pre>
+                        </p>
+                        <a href="acm_events_main-main/34_Advaya2- Enterprenehers.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/Advaya2-Day1.jfif" alt="Diving Into Open Ocean" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Advaya 2.0 (Day 1)- Diving Into Open Ocean</h3>
+                        <p class="card-text">Hosted by: Tamanna Verma <br> Main Guest:  Kunal Kushwaha <br> Number of attendees: 200+</p>
+                        <a href="acm_events_main-main/33_Advaya2-Diving Into Open Ocean.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="cardBox filter 9">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/advaya2.jfif" alt="Advaya 2.O" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Tech Week - Advaya 2.O</h3>
+                        <p class="card-text">Advaya 2.0 consisted of a weeklong exciting sessions, full of opportunities from April 12 to April 18.</p>
+                        <a href="acm_events_main-main/32_Advaya2.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="cardBox filter 11">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/SelfDevelopment.PNG" alt="Self development through communities" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Self development through communities</h3>
+                        <p class="card-text"> Taken by ACM Core members Amandeep Kaur and Soumya Sharma in parternship with OutScal.
+                            .</p>
+                        <a href="acm_events_main-main/31_selfDevelopment.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                
 
                 <div class="cardBox filter all">
                     <div class="card">
@@ -267,14 +453,33 @@
                     </div>
                     </div>
                 </div>
-                <div class="cardBox filter all">
+
+                <div class="cardBox filter 11">
+                    <div class="card">
+                    <div class="front">
+                        <img src="acm_events_main-main/images/mastering2.jfif" alt="Mastering The Masters" class="image-fluid">
+                    </div>
+                    <div class="back">
+                    	<div class="back-text">
+                        <h3 class="card-title">Mastering the Masters - A gateway to gate
+                        </h3>
+                        <p class="card-text"> Organized by Tamanna Verma, Quanta Gupta, Bhanupriya Sharma, Avni Uplabdhee, Abhigya verma, Priya Chaturvedi, Nehal Kohli, Nidhi Yadav
+
+                            .</p>
+                        <a href="acm_events_main-main/30_mastering2.html">Read More</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="cardBox filter 11">
                     <div class="card">
                     <div class="front">
                         <img src="acm_events_main-main/images/mastering.jpg" alt="Mastering The Masters" class="image-fluid">
                     </div>
                     <div class="back">
                     	<div class="back-text">
-                        <h3 class="card-title">Mastering the Masters - A roadmap to MS abroad
+                        <h3 class="card-title">Mastering the Masters - A roadmap to MS abroad 
                         </h3>
                         <p class="card-text"> Organized by Tamanna Verma, Quanta Gupta, Bhanupriya Sharma, Avni Uplabdhee, Abhigya verma, Priya Chaturvedi, Nehal Kohli, Nidhi Yadav
 
@@ -736,7 +941,8 @@
 
         </div>
     </section>
-
+    
+</div>
     <script src="js/main.js"></script>
 
     <!-- scroll to top button -->
