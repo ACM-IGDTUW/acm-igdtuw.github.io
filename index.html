@@ -22,7 +22,10 @@
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!------ jQuery  ------>
+    <!-- Animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jQuery  ------>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -38,7 +41,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!------ CSS ----->
+    <!--- CSS ----->
     <link rel="stylesheet" href="css/index-css/index-style.css">
 
     <!-- Owl Carousel -->
@@ -65,8 +68,8 @@
         <a class="logo" href="index.html">ACM IGDTUW</a>
         <nav class="nav-itself">
           <ul>
+            <li><a class="nav-li" href="team.html">Our Team</a></li>
             <li><a class="nav-li" href="events.html">Events</a></li>
-            <li><a class="nav-li" href="team.html">Executive Body</a></li>
             <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
           </ul>
         </nav>
@@ -76,13 +79,13 @@
 
     <!-- BANNER SECTION BEGINS -->
     <div class="banner">
-      <div class="content animate__animated animate__fadeInLeft animate__delay-2s">
+      <div class="content animate__animated animate__fadeInLeft animate__delay-0.5s">
           <h1>Welcome to ACM IGDTUW Student Chapter</h1>
           <div class="soc-desc">
             <p>One of IGDTUW's oldest technical society</p>
           </div>
       </div>
-      <div class="banner-social animate__animated animate__fadeInRight animate__delay-3s">
+      <div class="banner-social animate__animated animate__fadeInRight animate__delay-1s">
         <ul>
           <li><a class="soc_tooltip" data-toggle="tooltip" data-placement="top" title="Follow us on LinkedIn"   href="https://www.linkedin.com/company/acm-student-chapter-igdtuw/"  target="_blank"><img class="social-icon" src="assets/linkedin-icon.svg" alt="Check out ACM IGDTUW on LinkedIn"></a></li>
           <li><a class="soc_tooltip" data-toggle="tooltip" data-placement="top" title="Follow us on Facebook"  href="https://www.facebook.com/AcmStudentChaptersIGIT/" target="_blank"><img class="social-icon" src="assets/facebook-icon.svg" alt="Check out ACM IGDTUW on Facebook"></a></li>
@@ -94,11 +97,11 @@
     <!-- BANNER SECTION ENDS -->
 
     <!-- ABOUT SECTION BEGINS -->
-    <section class="about-acm">
+    <section class="about-acm animatable fadeInDown">
       <div class="row-1">
           <div class="left">
-            <!-- Animation here
-            <div class="animate__animated animate__bounce">  -->
+            <!-- Animation here -->
+            <!-- <div class=""> -->
             <h1 class="about-title title blue-white-title">About ACM</h1>
             <div class="about-content">
               <p class="about-desc desc">
@@ -117,7 +120,7 @@
                 the highest standards, and recognition of
                 technical excellence.
             </p>
-            <p class="desc ">
+            <p class="desc">
               ACM is organized into over 171 local chapters
               and 35 Special Interest Groups (SIGs), through
               which it conducts most of its activities. Additionally,
@@ -129,24 +132,26 @@
             </div>
           </div>
         </div>
-      </div>
+      <!-- </div> -->
     </section>
 
 
-    <section class="about-acm-igdtuw">
+    <section class="about-acm-igdtuw animatable fadeInDown">
       <div class="row-2">
         <div class="left">
           <img class="about-img-m" src="img/bg1.jpg" alt="ACM IGDTUW Student Chapter Team Photograph">
         </div>
         <div class="right">
           <h1 class="about-title title blue-white-title">ACM IGDTUW</h1>
-          <p class="about-desc desc">ACM @ IGDTUW’ is the technical student society of the Department of Information Technology, Indira Gandhi Delhi Technical University. Formed in 2012, the society aims to provide learning resources through its digital libraries and also assists in conducting workshops and seminars on a variety of relevant topics in the field of computing. Being the flagship society of the department of Information Technology, the annual technical festival of the department is also conducted by the society.</p>
+          <p class="about-desc desc">ACM @ IGDTUW’ is the technical student society of the Department of Information Technology, Indira Gandhi Delhi Technical University. Formed in 2012, the society aims to provide learning resources through its digital libraries and also assists in conducting workshops and seminars on a variety of relevant topics in the field of computing. Being the flagship society of the department of Information Technology, the annual technical festival of the department is also conducted by the society.<br>
+                <h2 style="color:white; padding-left:53px">Message from VC ma'am & our Faculty Advisor:</h2>
+          </p>
         </div>
       </div>
     </section>
 
         <!-- COMMUNITY LINKS SECTION BEGINS -->
-        <section class="community-links">
+        <section class="community-links animatable fadeInDown">
           <div class="cl-container">
             <h1 class="communiity-links-title title blue-white-title">Join The Community!</h1>
             <div class="links-container">
@@ -160,52 +165,25 @@
         </section>
         <!-- COMMUNITY LINKS SECTION ENDS -->
 
-    <!-- UPCOMING EVENT SECTION BEGINS -->
-    <!-- <section class="about-acm-igdtuw">
-      <div class="row-2" style="height: auto;">
-          <div class="left">
-              <h1 class="about-title title blue-white-title">Upcoming Event - Outreachy Session</h1>
-             <p class="about-desc desc">An informative session on MITACS Globalink Research internship taken by Ms Amandeep Kaur paving the path for reseach aspirants.</p>
-          </div>
-          <div class="right">
-        <h1 class="about-title title blue-white-title">Upcoming - Session on Outreachy Internship</h1>
-              <p class="about-desc desc">Outreachy is an internship program that supports diversity and opensource by providing paid remote internships to people subject to bias and impacted by underrepresentation in society.</p>
-               <br>
-               <div class="links-container">
-                  <a class="cl-link-item advaya-read-more" href="#" target="_blank" class="cl">Registrations start soon</a>
-               </div>
-          </div>
-      </div>
-    </section> -->
-    <!-- UPCOMING EVENT SECTION ENDS -->
-
-  <!-- PAST EVENT SECTION BEGINS -->
-    <section class="about-acm-igdtuw">
-      <div class="row-2" style="height: auto;">
-          <div class="left">
-              <h1 class="about-title title blue-white-title">Past Event - A Walkthrough MITACS Canada</h1>
-<!--               <p class="about-desc desc">An informative session on MITACS Globalink Research internship taken by Ms Amandeep Kaur paving the path for reseach aspirants.</p> -->
-          </div>
-          <div class="right">
-<!--               <h1 class="about-title title blue-white-title">Upcoming - Session on Outreachy Internship</h1> -->
-              <p class="about-desc desc">An informative session on MITACS Globalink Research internship taken by Ms Amandeep Kaur paving the path for reseach aspirants.</p>
-               <br>
-               <div class="links-container">
-                  <a class="cl-link-item advaya-read-more" href="https://youtu.be/FVTw_NuG0Io" target="_blank" class="cl">Watch On Youtube</a>
-               </div>
-          </div>
-      </div>
-    </section>
-    <!-- PAST EVENT SECTION ENDS -->
-
-
+<!-- Message SECTION BEGINS -->
+<!-- <section class="row-3">
+<div class="box">
+  <h2 class="claymorphism">Claymorphism</h2>
+</div>
+</section> -->
+<!-- Message SECTION ENDS -->
+<!-- <section class="about-acm-igdtuw animatable fadeInDown">
+  <div class="row-3">
+      <h1 style="color:white; margin:auto">Message from VC ma'am & our Faculty Advisor</h1>
+  </div>
+</section> -->
 
     <!-- ABOUT SECTION BEGINS -->
     <section class="highlights">
       <div class="highlights-container">
         <h1 class="highlights-main-title title white-title">What We Do</h1>
         <ul>
-          <li>
+          <li class="animatable fadeBgColorhighlights">
               <div class="highlight-icon-container">
                 <img src="assets/advaya-icon.svg" alt="Advaya Icon">
               </div>
@@ -222,8 +200,9 @@
                   with attendees brimming up the webinars.
                 </p>
                 </div>
+
           </li>
-          <li>
+          <li class="animatable fadeBgColorhighlights">
             <div class="highlight-icon-container">
               <img src="assets/workshop-icon.svg" alt="Workshops Icon">
             </div>
@@ -240,7 +219,7 @@
 
             </p>
           </li>
-          <li>
+          <li class="animatable fadeBgColorhighlights">
             <div class="highlight-icon-container">
               <img src="assets/scholarship-icon.svg" alt="Monthly Sessions Icon">
             </div>
@@ -270,7 +249,7 @@
         <div class="s-container">
 
 
-          <div class="s-box">
+          <div class="s-box animatable fadeBgColor">
             <div class="s-icon">
               <i class="fa fa-bullhorn"></i>
             </div>
@@ -280,7 +259,7 @@
             </div>
           </div>
 
-          <div class="s-box">
+          <div class="s-box animatable fadeBgColor">
             <div class="s-icon">
               <i class="fa fa-calendar-check-o"></i>
             </div>
@@ -290,7 +269,7 @@
             </div>
           </div>
 
-          <div class="s-box">
+          <div class="s-box animatable fadeBgColor">
             <div class="s-icon">
               <i class="fa fa-pencil"></i>
             </div>
@@ -301,7 +280,7 @@
               It is also responsible for recording the Chapter’s daily affairs. </div>
           </div>
 
-          <div class="s-box">
+          <div class="s-box animatable fadeBgColor">
             <div class="s-icon">
               <i class="fa fa-paint-brush"></i>
             </div>
@@ -311,7 +290,7 @@
             </div>
           </div>
 
-          <div class="s-box">
+          <div class="s-box animatable fadeBgColor">
             <div class="s-icon">
               <i class="fa fa-laptop"></i>
             </div>
@@ -529,6 +508,38 @@
      btnScrollToTop.addEventListener("click", function () {
         window.scrollTo(0,0); }
     );
+</script>
+   <!-- scroll to animate -->
+<script>
+jQuery(function($) {
+
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
 </script>
   </body>
 
