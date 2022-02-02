@@ -196,6 +196,7 @@ header nav ul li a {
   font-weight: bold;
   text-align: center;
   padding: 4em;
+  
 }
 
 .banner .soc-desc {
@@ -211,6 +212,7 @@ header nav ul li a {
   background: rgba(51, 51, 59, 0.4);
   padding: 2em 1em;
   border-radius: 10px;
+  
 }
 .btn3d {
 	position: relative;
@@ -261,6 +263,19 @@ header nav ul li a {
 .links-container a:active {
   background: rgba(51, 51, 59, 0.4);
   font-weight: 600;
+}
+
+.btn{
+  opacity: 1;
+  background-color: transparent;
+  /* box-shadow: turquoise; */
+  border-radius: 10px;
+  padding : 17px;
+  font-size: 1.2em;
+  margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 150px;
+	margin-right: 2px;
 }
 
 /* ==========
@@ -744,10 +759,14 @@ header nav ul li a {
 }
 
 @media only screen and (min-width: 350px) {
-  .subteam-container,
+  /* .subteam-container,
 /*  .cl-container {
     height: 320px;
-  }*/
+  }*/ 
+  .btn{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 @media only screen and (min-width: 500px) {
@@ -757,6 +776,10 @@ header nav ul li a {
   .subteam-container,
   .cl-container {
     height: 300px;
+  }
+  .btn{
+    margin-left: 150px;
+    margin-right: 50px;
   }
 }
 
@@ -807,7 +830,7 @@ header nav ul li a {
 
 @media only screen and (min-width: 900px) {
   .row-2 {
-    padding: 2em 1em;
+    padding: .5em;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 45% 50%;
