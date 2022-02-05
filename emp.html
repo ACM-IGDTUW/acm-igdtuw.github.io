@@ -5,39 +5,207 @@
     <title>ACM IGDTUW: Past Workshops</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="css/emp.css">
     <link rel="stylesheet" href="css/header/header-style.css">
 	<link rel="stylesheet" href="css/footer/footer-style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+      rel="stylesheet">
+    <!-- jQuery -->
+        <!-- <script src="js/events-js/jquery-3.3.1.min.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script>
+            $(document).ready(function(){
+                $(".button").click(function(){
+                    var name = $(this).attr("data-filter");
+                    if(name == "all"){
+                        $(".filter").show("2000");
 
-    <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+                    }else{
+                        $(".filter").not("." + name).hide("1000");
+                        $(".filter").filter("." + name).show("5000");
+                    }
+                });
+                $(".navigation ").click(function(){
+                    $(this).addClass("active").siblings().removeClass("active");
+            });
+
+            });
+
+        </script>
 
 </head>
 <style>
-    body{
-		background-color: #04021a;
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='432' height='432' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23542009' stroke-width='2.4'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23c73616'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-	}
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #04021a;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='432' height='432' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23542009' stroke-width='2.4'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23c73616'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        font-family: 'Poppins', serif;
+        color: #fff;
+        font-size: .86rem;
+    }
+    a{
 
-   header nav ul li a{
-       display: block;
-       padding: 0px 13.76px;
-   }
-   @media only screen and (max-width: 800px){
-       .nav-container header{
-           padding: 27.52px;
-           font-size: 13.76px;
-       }
-   }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    section .section-title {
+        text-align: center;
+        color: #fff;
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+    .navigation{
+        /* padding: 15px 0px; */
+        display: inline-block;
+	    border:1px solid rgb(51, 51, 59);
+        background: rgba(51, 51, 59, .2);
+	    border-radius: 30px;
+	    padding: 4px;
+    	margin:0 0 60px 0;
+    }
+    .navigation a{
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        color: #ddcdcd;
+        text-transform: uppercase;
+        line-height: 44px;
+        text-align: center;
+        border-radius: 25px;
+        font-weight: 500;
+        padding: 0 20px;
+        min-width: 130px;
+        cursor: pointer;
+        -webkit-transition:all 0.3s ease-in-out;
+        -ms-transition:all 0.3s ease-in-out;
+        -moz-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
 
-        /* scroll to the top */
+    }
+
+    .navigation a:active,
+    .navigation a:hover{
+        background-color: rgba(230, 128, 45, 0.56);
+	    color: #fff;
+    }
+
+    .boxesContainer{
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card *{
+        box-sizing: border-box;
+    }
+
+    .card{
+        position: relative;
+        display: inline-block;
+	    overflow: hidden;
+	    width: 100%;
+	    height: auto;
+        margin: 1em;
+    }
+
+    .front,
+    .back{
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+    }
+
+
+    .front img{
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .front{
+        display: block;
+    }
+
+    .back{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: rgba(51, 51, 59, 0.32);
+        color: #fff;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -ms-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+
+    }
+
+    .card:hover .back,
+    .card:active .back{
+        opacity: 1;
+    }
+
+
+    .card:hover .front >img,
+    .card:active .front>img{
+        opacity: 0;
+    }
+
+    .back-text{
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        padding: 2em 1em 1em 1em;
+        -moz-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .card-title{
+        font-size: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .card-text{
+        font-size: .86em;
+    }
+
+
+    .card .back a {
+        padding: 0.4em 0.6em;
+        background: rgba(51, 51, 59, 0.8);
+        color: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 1em;
+        transition: all 0.2s ease 0s;
+
+    }
+
+    .card .back a:hover {
+        background: rgba(230, 128, 45, 0.56);
+        color: #fff;
+        text-shadow: 0 0 1px #333;
+    }
+
     #btnScrollToTop {
         position: fixed;
         right: 10px;
@@ -54,673 +222,622 @@
     #btnScrollToTop:active {
         background:rgba(51, 51, 59, .2)
     }
+
+
+
+    @media (min-width: 648px) and (min-height: 600px) and (max-height: 714px){
+        .row {
+            position: fixed;
+            z-index:5;
+            left: 2rem;
+            top: 50%;
+            margin-top: -210px;
+            width: 13rem;
+        }
+        .navigation a {
+            line-height: 37px;
+        }
+
+        .event-cards , .section-title{
+            margin-left: 15rem;
+            padding: 0;
+        }
+        .footer, .copyright-section {
+            margin-left: 15rem;
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+    }
+
+    @media (min-width: 648px) and (min-height: 715px ) {
+        .row {
+            position: fixed;
+            z-index:5;
+            left: 2rem;
+            top: 50%;
+            margin-top: -260px;
+            width: 13rem;
+        }
+        .navigation a {
+            line-height: 44px;
+        }
+
+        .event-cards , .section-title {
+            margin-left: 15rem;
+            padding: 0;
+        }
+        .footer, .copyright-section {
+            margin-left: 15rem;
+            padding-left: 8em;
+            padding-right: 8em;
+        }
+    }
 </style>
+
+
 <body>
-
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <!-- Team -->
-    <section id="team" class="pb-5">
+    <section>
         <div class="container">
-            <h5 class="section-title h1">PAST WORKSHOPS</h5>
+            <h1 class="section-title">PAST WORKSHOPS</h1>
 
-
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <ul id="filter-list">
-                        <li class="filter active" data-filter="0">All</li>
-                        <li class="filter" data-filter="1">Open Source</li>
-                        <li class="filter" data-filter="2">Cyber security</li>
-                        <li class="filter" data-filter="3">Machine Learning</li>
-                        <li class="filter" data-filter="4">Web Development</li>
-                        <li class="filter" data-filter="5">Competetive</li>
-                        <li class="filter" data-filter="6">Android</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-
-            <!--OPEN SOURCE-->
-
-            <!-- Team member -->
-            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/hacktober.png" alt="card image"></p>
-                                    <h4 class="card-title">Introduction to Open Source and Hacktoberfest</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title"></h4>
-                                    <p class="card-text"></p>  
-                                    <p><img class=" img-fluid" src="img/past-workshops/git1.jpg" alt="card image"></p>
-                                 
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row" style="text-align: center;">
+                <div class="navigation">
+                        <a href="#" class="button active" data-filter="all">All</a>
+                        <!-- <a href="#" class="button" data-filter="0">Upcoming Events</a> -->
+                        <a href="#" class="button" data-filter="0">2021</a>
+                        <a href="#" class="button" data-filter="1">2020</a>
                 </div>
             </div>
 
-            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git2.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Beyond Hacktoberfest- Gsoc,Outreachy</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git4.jpg" alt="card image"></p>
-                                        <p class="card-text"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git3.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Google Summer of Code</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title"></h4>
-                                    <p><img class=" img-fluid" src="img/past-workshops/git5.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git4.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Open Source Workshop </h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/comp5.jpg" alt="card image"></p>
-                                    <h4 class="card-title"></h4>
-                                   
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- ./Team member -->
-            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/androidhands.png" alt="card image"></p>
-                                    <h4 class="card-title">Session on Android App Development</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/and3.jpg" alt="card image"></p>
-                                    <h4 class="card-title"></h4>
-                                    <p class="card-text"></p>
-                        
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Team member --><!---cybersecurity card-->
-            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyber1.png" alt="card image"></p>
-                                    <h4 class="card-title">Expert Talk on Cybersecurity</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyber2.jpg" alt="card image"></p>
-                                    <h4 class="card-title">.</h4>
-                                    <p class="card-text">. .</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-           
-            <!-- ./Team member -->
-            <!-- Team member --><!--webD card-->
-            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/webd1.png" alt="card image"></p>
-                                    <h4 class="card-title">An Intro to Web Development with Tanya and Soumya</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/3.png" alt="card image"></p>
-                                    <h4 class="card-title">.</h4>
-                                    <p class="card-text"></p>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-           
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 1 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git6.png" alt="card image"></p>
-                                    <h4 class="card-title">Github on your Tips</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/git10.png" alt="card image"></p>
-                                    <h4 class="card-title">.</h4>
-                                   
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <div class="itemBox 5 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cp1.png" alt="card image"></p>
-                                    <h4 class="card-title">Interview Preparation  and Competitive Programming session</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                           
-                                    <p><img class=" img-fluid" src="img/past-workshops/comp5.jpg" alt="card image"></p>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- ./Team member -->
-            <div class="itemBox 5 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/comp7.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Tips and tricks for learning Competitive</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center ">
-                                    <p><img class=" img-fluid" src="img/past-workshops/comp4.jpg" alt="card image"></p>
-                                    <h4 class="card-title">.</h4>
-                                    
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ./Team member -->
-            <!-- ./Team member -->
-            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyberweb.png" alt="card image"></p>
-                                    <h4 class="card-title">Cybersecurity- Web Application security</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center ">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyber1.jpg" alt="card image"></p>
-                                    <h4 class="card-title">.</h4>
-                                   
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- ./Team member -->
-            <div class="itemBox 2 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyber3.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Cybersecurity.. How to start?</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/cyber5.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-
-            <!-- Team member -->
-            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/py1.png" alt="card image"></p>
-                                    <h4 class="card-title">Machine learning using python </h4>
-                                    <p class="card-text"></p>
-                                  <!--   <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <p><img class=" img-fluid" src="img/past-workshops/py3.jpeg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/summer3.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Summer Workshop on Machine Learning</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                   
-                                    <p><img class=" img-fluid" src="img/past-workshops/summer1.jpg" alt="card image"></p>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/deepl.png" alt="card image"></p>
-                                    <h4 class="card-title">Introduction to Deep Learning </h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                   
-                                    <p><img class=" img-fluid" src="img/past-workshops/dl1.jpeg" alt="card image"></p>
-                                   
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/introml.png" alt="card image"></p>
-                                    <h4 class="card-title">An Intro to Machine Learning Algorithms </h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                 
-                                    <p><img class=" img-fluid" src="img/past-workshops/ml1.png" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 3 acol-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/mlhands.png" alt="card image"></p>
-                                    <h4 class="card-title">Hands on ML Workshop</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                 
-                                    <p><img class=" img-fluid" src="img/past-workshops/backend1.jpg" alt="card image"></p>
-                                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-           
-            <!-- Team member -->
-            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/web1.png" alt="card image"></p>
-                                    <h4 class="card-title">Full-Stack Web Development with backend using Ruby on Rails</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                   
-                                    <p><img class=" img-fluid" src="img/past-workshops/frontend2.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          
-            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/web4.png" alt="card image"></p>
-                                    <h4 class="card-title">Web development and scopes</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                   
-                                    <p><img class=" img-fluid" src="img/past-workshops/web10.png" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/comp6.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Android FAQ Session by seniors</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    
-                                    <p><img class=" img-fluid" src="img/past-workshops/android.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          
-            <!-- Team member -->
-            
-            <!-- Team member --><!--Android card-->
-            <div class="itemBox 6 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/android4.png" alt="card image"></p>
-                                    <h4 class="card-title">BUILD YOUR OWN APP- Android development</h4>
-                                    <p class="card-text"></p>
-                                    <!-- <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    
-                                    <p><img class=" img-fluid" src="img/past-workshops/and3.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="itemBox 4 col-xs-12 col-sm-6 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/past-workshops/frontend2.jpg" alt="card image"></p>
-                                    <h4 class="card-title">ACM WebD session</h4>
-                                    <p class="card-text"></p>
-                                   <!--  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                  
-                                    <p><img class=" img-fluid" src="img/past-workshops/backend2.jpg" alt="card image"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          
-        </div>
         </div>
     </section>
-    <!-- Team -->
 
 
-        <script src="js/emp-js/jquery-3.3.1.min.js"></script>
-        <script src="js/emp-js/popper.min.js"></script>
-        <script src="js/emp-js/jquery.filterizr.min.js"></script>
-        <script src="js/emp-js/script.js"></script>
-        <script src="js/main.js"></script>>
+    <section class="event-cards">
+        <div class="container">
 
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.filter').click(function() {
-                    const value = $(this).attr('data-filter');
-                    if (value == '0') {
-                        $('.itemBox').show('1000');
-                    } else {
-                        $('.itemBox').not('.' + value).hide('1000');
-                        $('.itemBox').filter('.' + value).show('1000');
-                    }
-                })
-            });
-        </script>
-        <script>
-            $(function() {
-                $(document).scroll(function() {
-                    var $nav = $("#mainNavbar");
-                    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-                });
-            });
-        </script>
+            <div class="boxesContainer">
 
 
-        </script>
+<!-- ---------------------------2021 Events-------------------------------- -->
+                
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/Orientation2021.jpg" alt="Orientation2021" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br>Computational Techniques on <br> Social Good</h3>
+        <p class="card-text">Orientation</p>
+        <a href="acm_events_main-main/60_Orientation2021.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
 
-           <!-- scroll to top button -->
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/KN-1.jpg" alt="Keynote Talk and AMA by Prof Ponnurangam Kumaraguru" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Keynote Talk and AMA by<br> Prof Ponnurangam Kumaraguru</h3>
+        <p class="card-text">KeyNote and AMA session</p>
+        <a href="acm_events_main-main/39_Keynote Talk and AMA by Prof Ponnurangam Kumaraguru.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/KN-2.jpg" alt="Keynote Talk and AMA by Prof Kannan Srinathan" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Keynote Talk and AMA by<br> by Prof Kannan Srinathan</h3>
+        <p class="card-text">KeyNote and AMA session</p>
+        <a href="acm_events_main-main/40_Keynote Talk and AMA by Prof Kannan Srinathan.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AML - NLP.jpg" alt="Advanced ML session: NLP" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Advanced ML session</h3>
+        <p class="card-text">Talk on NLP</p>
+        <a href="acm_events_main-main/41_Advanced ML session NLP.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AML - CV.jpg" alt="Advanced ML session: Computer Vision" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Advanced ML session</h3>
+        <p class="card-text">Talk on Computer Vision</p>
+        <a href="acm_events_main-main/42_Advanced ML session Computer Vision.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AML - graphs.jpg" alt="Advanced ML session: Graphs" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Advanced ML session</h3>
+        <p class="card-text">Talk on Graphs</p>
+        <a href="acm_events_main-main/43_Advanced ML session Graphs.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AML - DL.jpg" alt="Advanced ML session: Deep Learning" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Advanced ML session</h3>
+        <p class="card-text">Talk on Deep Learning</p>
+        <a href="acm_events_main-main/44_Advanced ML session Deep Learning.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>  
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AML - KnowledgeGraphs.jpg" alt="Advanced ML session: Knowledge Graphs" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Advanced ML session</h3>
+        <p class="card-text">Talk on Knowledge Graphs</p>
+        <a href="acm_events_main-main/45_Advanced ML session Knowledge Graphs.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Kirti Seth.jpg" alt="Expert talk on ACO Algorithm by Dr Kirti Seth" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Kirti Seth</h3>
+        <p class="card-text">Talk on ACO Algorithm</p>
+        <a href="acm_events_main-main/46_Expert talk on ACO Algorithm by Dr Kirti Seth.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-LokeshJain.jpg" alt="Expert talk on Travelling Salesman Problem by Mr. Lokesh Jain" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Mr. Lokesh Jain</h3>
+        <p class="card-text">Talk on Travelling Salesman Problem</p>
+        <a href="acm_events_main-main/47_Expert talk on Travelling Salesman Problem by Mr. Lokesh Jain.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-VikasChauhan.jpg" alt="Expert talk on ACO algorithm problems by Mr Vikas Chauhan" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Mr Vikas Chauhan</h3>
+        <p class="card-text">Talk on ACO algorithm problems</p>
+        <a href="acm_events_main-main/48_Expert talk on ACO algorithm problems by Mr Vikas Chauhan.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-PawanGoyal.jpg" alt="Expert talk on Sanskrit Computational Linguistics by Dr Pawan Goyal" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Pawan Goyal</h3>
+        <p class="card-text">Talk on Sanskrit Computational Linguistics</p>
+        <a href="acm_events_main-main/49_Expert talk on Sanskrit Computational Linguistics by Dr Pawan Goyal.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Sethi.jpg" alt="Expert talk on Computers and Medicine by Dr Tavpritesh Sethi" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Tavpritesh Sethi</h3>
+        <p class="card-text">Talk on Computers and Medicine</p>
+        <a href="acm_events_main-main/50_Expert talk on Computers and Medicine by Dr Tavpritesh Sethi.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Milan.jpg" alt="Expert talk on Network Science by Dr Milan Janosov" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Milan Janosov</h3>
+        <p class="card-text">Talk on Network Science</p>
+        <a href="acm_events_main-main/51_Expert talk on Network Science by Dr Milan Janosov.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Kiran.jpg" alt="Expert talk on research using WhatsApp data by Dr Kiran Garimella" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Kiran Garimella</h3>
+        <p class="card-text">Talk on research using WhatsApp data</p>
+        <a href="acm_events_main-main/52_Expert talk on research using WhatsApp data by Dr Kiran Garimella.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Niraj.jpg" alt="Expert talk on Software Industry by Dr Niraj Kumar" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Niraj Kumar</h3>
+        <p class="card-text">Talk on Software Industry</p>
+        <a href="acm_events_main-main/53_Expert talk on Software Industry by Dr Niraj Kumar.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-Gitanjali.jpg" alt="Expert talk on Complex Network Analysis by Dr Gitanjali Yadav" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Gitanjali Yadav</h3>
+        <p class="card-text">Talk on Complex Network Analysis</p>
+        <a href="acm_events_main-main/54_Expert talk on Complex Network Analysis by Dr Gitanjali Yadav.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-TanuMitra.jpg" alt="Expert talk on Social Computing by Dr Tanu Mitra" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Tanu Mitra</h3>
+        <p class="card-text">Talk on Social Computing</p>
+        <a href="acm_events_main-main/55_Expert talk on Social Computing by Dr Tanu Mitra.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/ET-MamtaMadan.jpg" alt="Expert talk on Evolutionary Computing by Dr Mamta Madan" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - Expert talk by Dr Mamta Madan</h3>
+        <p class="card-text">Talk on Evolutionary Computing</p>
+        <a href="acm_events_main-main/56_Expert talk on Evolutionary Computing by Dr Mamta Madan.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AT-Madhura.jpg" alt="Alumni Research Talk by Ms Madhura Pande" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - "Alumni Research Talk by Ms Madhura Pande</h3>
+        <a href="acm_events_main-main/57_Alumni Research Talk by Ms Madhura Pande.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AT-NehaBedi.jpg" alt="Alumni Talk by Ms Neha Bedi" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - "Alumni Research Talk by Ms Neha Bedi</h3>
+        <a href="acm_events_main-main/58_Alumni Talk by Ms Neha Bedi.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 0">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/AT-Aakriti.jpg" alt="Alumni Talk by Ms Aakriti Budhraja" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Computational Techniques on <br> Social Good - "Alumni Research Talk by Ms Aakriti Budhraja</h3>
+        <a href="acm_events_main-main/59_Alumni Talk by Ms Akriti Budhraja.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- --------------------------------2020 Events------------------------- -->
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/keynotekkbiswas.jpeg" alt="ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML - Keynote Talk by <br> Prof. K K Biswas</h3>
+        <p class="card-text">Talk on Generative Autoencoders</p>
+        <a href="acm_events_main-main/12_ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/explectsudarshaniyengar.jpeg" alt="ACM Summer Workshop on DS and ML-by Dr. Sudharshan Iyengar" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML-by <br> Dr. Sudharshan Iyengar</h3>
+        <p class="card-text">ACM IGDTUW Summer-Workshop, on Network Sciences</p>
+        <a href="acm_events_main-main/13_ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Sudharshan Iyengar.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/14.jpeg" alt="ACM Summer Workshop on DS and ML - Expert Lecture by Mr. Rakesh Dubbudu" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML Expert Lecture by <br>Mr. Rakesh Dubbudu</h3>
+        <p class="card-text">Session on Fake news</p>
+        <a href="acm_events_main-main/14_ACM Summer Workshop on DS and ML - Expert Lecture by Mr. Rakesh Dubbudu.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/15.jpeg" alt="ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Ruchika Malhotra" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML Expert Lecture by <br>  Dr. Ruchika Malhotra</h3>
+        <p class="card-text">Expert Lecture on ML and <br> Software Engineering</p>
+        <a href="acm_events_main-main/15_ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Ruchika Malhotra.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-4 July-1.jpeg" alt="ACM Summer Workshop on DS and ML - Keynote Talk by Prof. Girish Nath Jha" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br>  DS and ML - Keynote Talk by<br> Prof. Girish Nath Jha</h3>
+        <p class="card-text">Session on Sanskrit and <br> Computers</p>
+        <a href="acm_events_main-main/16_ACM Summer Workshop on DS and ML - Keynote Talk by Prof. Girish Nath Jha.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-3 July.jpeg" alt="ACM Summer Workshop on DS and ML - Expert Lecture by Dr. Ashish Khanna" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML Expert Lecture by <br> Dr. Ashish Khanna </h3>
+        <p class="card-text">Expert Lecture on Research in Academia</p>
+        <a href="acm_events_main-main/17_ACM summer workshop on DS and ML -Expert lecture by Dr. Ashish Khanna.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-1 July.jpeg" alt="ACM Summer Workshop on DS and ML-by Dr. Chandra Prakash" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML by <br> Dr. Chandra Prakash</h3>
+        <p class="card-text">Session on  Reinforcement <br> Learning</p></p>
+        <a href="acm_events_main-main/18_ACM summer workshop on DS and ML -Expert lecture by Dr Chandra Prakash.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-22 June-1.jpeg" alt="ACM Summer Workshop on DS and ML-by Ponnurangam Kumaraguru" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML by <br> Ponnurangam Kumaraguru</h3>
+        <p class="card-text">Keynote Address Session </p>
+        <a href="acm_events_main-main/19_ACM summer workshop on DS and ML -Keynote Address by Prof. Ponnurangam Kumaraguru.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-22 June.jpeg" alt="ACM Summer Workshop on DS and ML - Expert Talk by Dr. Niyati Baliyan" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML - Expert Talk by <br> Dr. Niyati Baliyan</h3>
+        <p class="card-text">Session on Semantic Web</p>
+        <a href="acm_events_main-main/20_ACM summer workshop on DS and ML - Expert lecture by Dr Niyati Baliyan.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-19 June.jpeg" alt="ACM Summer Workshop on DS and ML - Keynote Address by Prof. Deepak Garg" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">ACM Summer Workshop on <br> DS and ML - Keynote <br> Address by <br>  Prof. Deepak Garg</h3>
+        <p class="card-text">Session on Data Science and ML</p>
+        <a href="acm_events_main-main/21_ACM Summer Workshop on DS and ML - Keynote Address by Prof. Deepak Garg.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-15 April.jpeg" alt="Advaya - Learn the art of coding" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Advaya - Learn the art of coding</h3>
+        <p class="card-text">ACM IGDTUW is bringing to you Placement Cheat Codes and ICPC Webinar under the banner of <br> अद्वय 2020.</p>
+        <a href="acm_events_main-main/22_Advaya 2020-Learn the art of coding - keynote speakers were Ms Divya Chakarwarti and Ms Shefali Jindal.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-14 April.jpeg" alt="Advaya 2020-Ready.Set.Research - session by Dr Rishabh Kaushal" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">Advaya 2020-Ready.Set.Research-session by Dr Rishabh Kaushal</h3>
+        <p class="card-text">You will learn how to write an appealing research paper under the banner of अद्वय 2020.</p>
+        <a href="acm_events_main-main/23_Advaya 2020-Ready.Set.Research - session by Dr Rishabh Kaushal.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+<div class="cardBox filter 1">
+    <div class="card">
+    <div class="front">
+        <img src="acm_events_main-main/images/PE-Advaya 20.jpeg" alt="ACM Summer Workshop on DS and ML - Keynote Talk by Prof. K K Biswas" class="image-fluid">
+    </div>
+    <div class="back">
+         <div class="back-text">
+        <h3 class="card-title">All about Advaya</h3>
+        <p class="card-text">Event Publicity poster</p>
+        <a href="acm_events_main-main/24_All about Advaya.html">Read More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+</div>
+            <!--.boxesContainer-->
+
+        </div>
+    </section>
+
+</div>
+    <script src="js/main.js"></script>
+
+    <!-- scroll to top button -->
     <button id = "btnScrollToTop">
         <i class="material-icons">arrow_upward</i>
     </button>
@@ -731,6 +848,9 @@
             window.scrollTo(0,0); }
         );
    </script>
+
+
+
 </body>
 
 </html>
