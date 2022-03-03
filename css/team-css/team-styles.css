@@ -209,3 +209,15 @@ img {
 .social-icons i:hover{
   color:#ffffff;
 }
+
+#btnScrollToTop{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}

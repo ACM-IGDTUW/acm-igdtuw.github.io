@@ -61,7 +61,8 @@
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"></a>
     <!-- END SCROLL TOP BUTTON -->
-
+    
+  <!-- <div class="above__fixed-arrow"> -->
     <!-- HEADER SECTION BEGINS-->
     <div class="nav-container">
       <header>
@@ -95,8 +96,11 @@
       </div>
     </div>
     <!-- BANNER SECTION ENDS -->
-
+  <!-- </div> -->
+  
     <!-- ABOUT SECTION BEGINS -->
+
+
     <section class="about-acm animatable fadeInDown">
       <div class="row-1">
           <div class="left">
@@ -113,6 +117,7 @@
                 membership group. Its membership is more than 100,000
                 as of 2011. Its headquarters are in New York City.
             </p>
+
             <p class="about-desc desc">
                 As the world’s largest computing society,
                 ACM strengthens the profession's collective
@@ -141,12 +146,14 @@
         <div class="left">
           <img class="about-img-m" src="img/bg1.jpg" alt="ACM IGDTUW Student Chapter Team Photograph">
         </div>
-        <div class="right">
+        <!-- <div class="right"> -->
+         <div class="Message__box">
           <h1 class="about-title title blue-white-title">ACM IGDTUW</h1>
           <p class="about-desc desc">ACM @ IGDTUW’ is the technical student society of the Department of Information Technology, Indira Gandhi Delhi Technical University. Formed in 2012, the society aims to provide learning resources through its digital libraries and also assists in conducting workshops and seminars on a variety of relevant topics in the field of computing. Being the flagship society of the department of Information Technology, the annual technical festival of the department is also conducted by the society.<br>
                 <h2 style="color:white; padding-left:53px">Message from VC ma'am & our Faculty Advisor:</h2>
-                <a href="./Message.html" class="cl" class="btn"><button class="btn"><div style="color:#fff;">click here to read</div></button></a>
+                <a href="./Message.html" ><button class="btn"><div style="color:#fff;">click here to read</div></button></a>
           </p>
+         <!-- </div> -->
         </div>
       </div>
     </section>
@@ -203,6 +210,9 @@
                 </div>
 
           </li>
+
+            
+
           <li class="animatable fadeBgColorhighlights">
             <div class="highlight-icon-container">
               <img src="assets/workshop-icon.svg" alt="Workshops Icon">
@@ -508,18 +518,31 @@
       });
     </script>
 
-   <!-- scroll to top button -->
-   <button id = "btnScrollToTop">
+<!-- scroll to top button -->
+
+  <button id = "btnScrollToTop">
     <i class="material-icons">arrow_upward</i>
-</button>
+  </button>
+
 
 <script>
-    const btnScrollToTop = document.querySelector("#btnScrollToTop");
-     btnScrollToTop.addEventListener("click", function () {
-        window.scrollTo(0,0); }
-    );
+   var mybutton = document.getElementById("btnScrollToTop");
+       window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+        } else {
+         mybutton.style.display = "none";
+      }
+    }
+
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+btnScrollToTop.addEventListener("click", function () {
+   window.scrollTo(0,0); }
+);
 </script>
-   <!-- scroll to animate -->
+<!-- scroll to animate -->
 <script>
 jQuery(function($) {
 
