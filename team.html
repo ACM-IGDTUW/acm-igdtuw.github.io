@@ -615,6 +615,18 @@ integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="ano
 </button>
 
 <script>
+
+var mybutton = document.getElementById("btnScrollToTop");
+       window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+         if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+         mybutton.style.display = "block";
+        } else {
+         mybutton.style.display = "none";
+      }
+    }
+
 	const btnScrollToTop = document.querySelector("#btnScrollToTop");
 	 btnScrollToTop.addEventListener("click", function () {
 		window.scrollTo(0,0); }

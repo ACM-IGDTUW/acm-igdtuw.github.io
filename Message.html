@@ -6,6 +6,12 @@
   <link rel="stylesheet" href="./css/Message.css">
   <link rel="stylesheet" href="./css/header/header-style.css">
   <link rel="stylesheet" href="./css/footer/footer-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
      <!-- HEADER SECTION BEGINS-->
@@ -133,6 +139,30 @@
   </section>
   <!-- FOOTER SECTION ENDS -->
   <script  src="./js/message.js"></script>
+
+   <!-- scroll to top button -->
+   <button id = "btnScrollToTop">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+  
+  <script>
+  
+  var mybutton = document.getElementById("btnScrollToTop");
+         window.onscroll = function() {scrollFunction()};
+  
+          function scrollFunction() {
+           if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+           mybutton.style.display = "block";
+          } else {
+           mybutton.style.display = "none";
+        }
+      }
+  
+    const btnScrollToTop = document.querySelector("#btnScrollToTop");
+     btnScrollToTop.addEventListener("click", function () {
+      window.scrollTo(0,0); }
+    );
+  </script>
 
 </body>
 </html>

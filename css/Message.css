@@ -121,7 +121,22 @@ body {
 .scrolled.slide-right {
   animation: slide-in-right 1s ease-in-out both;
 }
+/*------------------- ARROW CSS -----------------*/
 
+#btnScrollToTop{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+
+/*------------------- ARROW CSS -----------------*/
 @keyframes slide-in-left {
   0% {
     transition: initial translateX(-100px);
