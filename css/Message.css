@@ -63,7 +63,7 @@ body {
   flex-direction: column;
 }
 .card .row .Message p{
-  color: grey;
+  color: white;
 }
 .card .row img{
   height: 200px;
@@ -71,7 +71,7 @@ body {
   border-radius: 100%;
 }
 .content{
-  color: grey;
+  color: white;
   padding-bottom: 0%;
   padding-left: 20px;
   padding-right: 20px;
