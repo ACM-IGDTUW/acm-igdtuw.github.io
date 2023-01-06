@@ -72,6 +72,7 @@
             <li><a class="nav-li" href="team.html">Our Team</a></li>
             <li><a class="nav-li" href="events.html">Events</a></li>
             <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
+            <li><a class="nav-li" href="Message.html">Message</a></li>
           </ul>
         </nav>
       </header>
@@ -483,10 +484,138 @@
                 <p class="testimonial-item-position">Facebook <br>
                 California, US</p>
               </div>
+          </li>
+
+          <!-- video testimonials starts here-->
+
+       <li class="testimonial-item">
+            <div class="testimonial1">
+              <div id="wrappervideo" >
+                    <video  id="vid2" class="videostyle" controls >
+                      <source src="video/vid2.mp4" type="video/mp4">
+                      <!-- <source src="movie.ogg" type="video/ogg"> -->
+                      Your browser does not support the video tag.
+                    </video>
+                  <a class="buttonvideo" id='buttonvideo2' onclick="playPause('2')" >Play</a>
+              </div>
+          </div>
+          <div class="arrow-down"></div>
+            <!-- <div class="testimonial-item-image-container">
+              <img src="img/testimonials/priyankaSangtani.jpg" alt="Priyanka Sangtani">
+            </div> -->
+              <div class="testimonial-item-title">
+                <p class="testimonial-item-name">Rachayita</p>
+                <p class="testimonial-item-position">BTech Graduate 2017 <br>
+                ACM student chapter member</p>
+              </div>
+          </li>
+       <li class="testimonial-item">
+            <div class="testimonial1">
+              <div id="wrappervideo" >
+                    <video  id="vid3" class="videostyle" controls >
+                      <source src="video/vid3.mp4" type="video/mp4">
+                       <!-- <source src="movie.ogg" type="video/ogg">  -->
+                      Your browser does not support the video tag.
+                    </video>
+                  <a class="buttonvideo" id='buttonvideo3' onclick="playPause('3')" >Play</a>
+              </div>
+          </div>
+          <div class="arrow-down"></div>
+            <!-- <div class="testimonial-item-image-container">
+               <img src="img/testimonials/priyankaSangtani.jpg" alt="Priyanka Sangtani">
+            </div> -->
+              <div class="testimonial-item-title">
+                <p class="testimonial-item-name">Vasundhara</p>
+                <p class="testimonial-item-position">MTech Gold Medalist <br>
+                ACM student chapter member</p>
+              </div>
+          </li>
+          <li class="testimonial-item">
+            <div class="testimonial1">
+              <div id="wrappervideo" >
+                    <video  id="vid1" class="videostyle" controls >
+                      <source src="video/vid1.mp4" type="video/mp4">
+                      <!-- <source src="movie.ogg" type="video/ogg"> -->
+                      Your browser does not support the video tag.
+                    </video>
+                  <a class="buttonvideo" id='buttonvideo1' onclick="playPause('1')" >Play</a>
+              </div>
+          </div>
+          <div class="arrow-down"></div>
+            <!-- <div class="testimonial-item-image-container">
+              <img src="img/testimonials/priyankaSangtani.jpg" alt="Priyanka Sangtani">
+            </div> -->
+              <div class="testimonial-item-title">
+                <p class="testimonial-item-name">Reeti Sarup</p>
+                <p class="testimonial-item-position">BTech Gold Medalist 2019 <br>
+                ACM student chapter member</p>
+              </div>
+          </li>
         </ul>
       </div>
 
+      
+
+
+     
+
     </section>
+    <!-- play/pause button javascript -->
+      <script> 
+          function playPause(x) { 
+            var element='vid'.concat(x);
+            var elebutton='buttonvideo'.concat(x);
+            var myVideo = document.getElementById(element); 
+            var mybutton=document.getElementById(elebutton);
+            if (myVideo.paused){
+              myVideo.play();
+              mybutton.innerHTML="Pause";
+            } 
+            else {
+              myVideo.pause(); 
+              mybutton.innerHTML="Play";
+            }
+          } 
+      </script>
+      <!-- <script> 
+          function playPause1() { 
+            var myVideo = document.getElementById('vid1'); 
+            var mybutton=document.getElementById('buttonvideo1');
+            if (myVideo.paused){
+              myVideo.play();
+              mybutton.innerHTML="Pause";
+            } 
+            else {
+              myVideo.pause(); 
+              mybutton.innerHTML="Play";
+            }
+          } ;
+           function playPause1() { 
+            var myVideo = document.getElementById('vid2'); 
+            var mybutton=document.getElementById('buttonvideo2');
+            if (myVideo.paused){
+              myVideo.play();
+              mybutton.innerHTML="Pause";
+            } 
+            else {
+              myVideo.pause(); 
+              mybutton.innerHTML="Play";
+            }
+          } ;
+           function playPause1() { 
+            var myVideo = document.getElementById('vid3'); 
+            var mybutton=document.getElementById('buttonvideo3');
+            if (myVideo.paused){
+              myVideo.play();
+              mybutton.innerHTML="Pause";
+            } 
+            else {
+              myVideo.pause(); 
+              mybutton.innerHTML="Play";
+            }
+          } 
+      </script> -->
+
     <!-- TESTIMONIAL SECTION ENDS -->
 
     <!-- SUBTEAM SECTION BEGINS -->
@@ -548,7 +677,7 @@
     <!-- jQuery Code for Owl Carousel -->
     <script>
         $('#testimonial-carousel').owlCarousel({
-          autoplay:true,
+          autoplay:false,
           dots: false,
           nav: true,
           loop:true,
