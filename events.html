@@ -17,7 +17,7 @@
                 $(".button").click(function(){
                     var name = $(this).attr("data-filter");
                     if(name == "all"){
-                        $(".filter").show("2000");
+                        $(".filter").show("2000");  
 
                     }else{
                         $(".filter").not("." + name).hide("1000");
@@ -45,6 +45,25 @@
         font-family: 'Poppins', serif;
         color: #fff;
         font-size: .86rem;
+    }
+
+    #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        display: none;
+        height: 90px;
+        width: 960px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: large;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-items: center;
+        justify-content: center;
+        border:1px solid rgb(51, 51, 59);
+        background:  rgba(83, 83, 103, 0.2);
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 1em;
+        margin-left: 9.5rem;
+        border-radius: 10px;
     }
 
     ul{
@@ -222,7 +241,26 @@
         background:rgba(51, 51, 59, .2)
     }
 
+    @media (max-width:500px){
+        #opensrc, #cysec, #hack, #ml, #advaya, #others{
+            width: 280px;
+            height: 100px;
+            margin: auto;
+        }
+        #dev{
+            width: 280px;
+            height: 130px;
+            margin: auto;
+        }
+    }
 
+    @media (min-width:500px) and (min-height:300px){
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+            width: 450px;
+            height: 100px;
+            margin: auto;
+        }
+    }
 
     @media (min-width: 648px) and (min-height: 600px) and (max-height: 714px){
         .row {
@@ -245,6 +283,11 @@
             margin-left: 15rem;
             padding-left: 8em;
             padding-right: 8em;
+        }
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+            width: 300px;
+            height: 100px;
+            margin: auto;
         }
     }
 
@@ -270,7 +313,29 @@
             padding-left: 8em;
             padding-right: 8em;
         }
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+            width: 600px;
+            height: 100px;
+            margin: auto;
+        }
     }
+
+    @media (min-width:900px){
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+            width: 650px;
+            height: 100px;
+            margin: auto;
+        }
+    }
+
+    @media (min-width:1300px){
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+            width: 950px;
+            height: 100px;
+            margin: auto;
+        }
+    }
+
 </style>
 
 
@@ -281,19 +346,76 @@
 
             <div class="row" style="text-align: center;">
                 <div class="navigation">
-                        <a href="#" class="button active" data-filter="all">All</a>
+                        <a href="#" class="button active" data-filter="all"
+                        onclick="
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">All</a>
                         <!-- <a href="#" class="button" data-filter="0">Upcoming Events</a> -->
-                        <a href="#" class="button" data-filter="0">Open Source</a>
-                        <a href="#" class="button" data-filter="1">Cyber security</a>
-                        <a href="#" class="button" data-filter="2">Web & App Development</a>
+                        <a href="#" class="button" data-filter="0" onclick="
+                        document.getElementById('opensrc').style.display = 'block';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">Open Source</a>
+                        <a href="#" class="button" data-filter="1" onclick="
+                        document.getElementById('cysec').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">Cyber security</a>
+                        <a href="#" class="button" data-filter="2" onclick="
+                        document.getElementById('dev').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none'">Web & App Development</a>
                         <!-- <a href="#" class="button" data-filter="4">Competetive</a> -->
                         <!-- <a href="#" class="button" data-filter="5">Fun Events</a> -->
                         <!-- <a href="#" class="button" data-filter="6">SIH</a> -->
-                        <a href="#" class="button" data-filter="3">Hackathon</a>
-                        <a href="#" class="button" data-filter="4">DS & ML</a>
-                        <a href="#" class="button" data-filter="5">Advaya</a>
+                        <a href="#" class="button" data-filter="3" onclick="
+                        document.getElementById('hack').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">Hackathon</a>
+                        <a href="#" class="button" data-filter="4" onclick="
+                        document.getElementById('ml').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">DS & ML</a>
+                        <a href="#" class="button" data-filter="5" onclick="
+                        document.getElementById('advaya').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('others').style.display = 'none';">Advaya</a>
                         <!-- <a href="#" class="button" data-filter="6">APP Development</a> -->
-                        <a href="#" class="button" data-filter="6">Others</a>
+                        <a href="#" class="button" data-filter="6" onclick="
+                        document.getElementById('others').style.display = 'block';
+                        document.getElementById('opensrc').style.display = 'none';
+                        document.getElementById('dev').style.display = 'none';
+                        document.getElementById('ml').style.display = 'none';
+                        document.getElementById('hack').style.display = 'none';
+                        document.getElementById('advaya').style.display = 'none';
+                        document.getElementById('cysec').style.display = 'none';">Others</a>
                 </div>
             </div>
 
@@ -302,6 +424,29 @@
 
 
     <section class="event-cards">
+        <div class = "caption">
+            <div id="opensrc">
+                <h2>Open Source</h2>
+            </div>
+            <div id="cysec">
+                <h2>Cyber Security</h2>
+            </div>
+            <div id = "dev">
+                <h2>Web & App Development</h2>
+            </div>
+            <div id = "hack">
+                <h2>Hackathon</h2>
+            </div>
+            <div id = "ml">
+                <h2>DS & ML</h2>
+            </div>
+            <div id = "advaya">
+                <h2>Advaya</h2>
+            </div>
+            <div id = "others">
+                <h2>Others</h2>
+            </div>
+        </div>
         <div class="container">
 
             <div class="boxesContainer">
