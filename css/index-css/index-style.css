@@ -189,7 +189,7 @@ header nav ul {
 
 header nav ul li a {
   display: block;
-  padding: 0em 1em;
+  padding: 0em 0.6em;
 }
 
 /* ==========
@@ -1256,9 +1256,10 @@ header nav ul li a {
   min-height: 250px;*/
   min-height: 200px;
   min-width: 150px;
+  max-width: 250px;
   margin: 0 auto;
   background: black;
-  border: 1px solid #aaa;
+  border: 1px solid black;
   border-radius: 50% ;
   background-clip: padding-box;
   align-content: center;
@@ -1303,6 +1304,7 @@ header nav ul li a {
   min-width: 200px;*/
   min-height: 150px;
   min-width: 150px;
+  max-width: 250px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1321,7 +1323,7 @@ header nav ul li a {
   font-style: italic;
 }
 
-@media and (max-width:300px){
+@media and (max-width:400px){
 
 .videostyle{
   max-width: 100px;
