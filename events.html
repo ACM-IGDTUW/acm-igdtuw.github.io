@@ -66,6 +66,24 @@
         border-radius: 10px;
     }
 
+    #heading{
+        height: 90px;
+        width: 960px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: large;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        align-items: center;
+        justify-content: center;
+        border:1px solid rgb(51, 51, 59);
+        background:  rgba(83, 83, 103, 0.2);
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 1em;
+        margin-left: 9.5rem;
+        border-radius: 10px;
+    }
+
     ul{
         margin: 0;
         padding: 0;
@@ -242,7 +260,7 @@
     }
 
     @media (max-width:500px){
-        #opensrc, #cysec, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #hack, #ml, #advaya, #others,#heading{
             width: 280px;
             height: 100px;
             margin: auto;
@@ -255,7 +273,7 @@
     }
 
     @media (min-width:500px) and (min-height:300px){
-        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others,#heading{
             width: 450px;
             height: 100px;
             margin: auto;
@@ -284,7 +302,7 @@
             padding-left: 8em;
             padding-right: 8em;
         }
-        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others,#heading{
             width: 300px;
             height: 100px;
             margin: auto;
@@ -313,7 +331,7 @@
             padding-left: 8em;
             padding-right: 8em;
         }
-        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others,#heading{
             width: 600px;
             height: 100px;
             margin: auto;
@@ -321,7 +339,7 @@
     }
 
     @media (min-width:900px){
-        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others,#heading{
             width: 650px;
             height: 100px;
             margin: auto;
@@ -329,7 +347,7 @@
     }
 
     @media (min-width:1300px){
-        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others{
+        #opensrc, #cysec, #dev, #hack, #ml, #advaya, #others,#heading{
             width: 950px;
             height: 100px;
             margin: auto;
@@ -354,7 +372,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">All</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'block';
+                        document.getElementById('h2').style.display = 'block';
+                        document.getElementById('h3').style.display = 'block';
+                        document.getElementById('h4').style.display = 'block';">All</a>
                         <!-- <a href="#" class="button" data-filter="0">Upcoming Events</a> -->
                         <a href="#" class="button" data-filter="0" onclick="
                         document.getElementById('opensrc').style.display = 'block';
@@ -363,7 +385,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">Open Source</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Open Source</a>
                         <a href="#" class="button" data-filter="1" onclick="
                         document.getElementById('cysec').style.display = 'block';
                         document.getElementById('opensrc').style.display = 'none';
@@ -371,7 +397,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">Cyber security</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Cyber security</a>
                         <a href="#" class="button" data-filter="2" onclick="
                         document.getElementById('dev').style.display = 'block';
                         document.getElementById('opensrc').style.display = 'none';
@@ -379,7 +409,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none'">Web & App Development</a>
+                        document.getElementById('others').style.display = 'none'
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Web & App Development</a>
                         <!-- <a href="#" class="button" data-filter="4">Competetive</a> -->
                         <!-- <a href="#" class="button" data-filter="5">Fun Events</a> -->
                         <!-- <a href="#" class="button" data-filter="6">SIH</a> -->
@@ -390,7 +424,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('cysec').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">Hackathon</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Hackathon</a>
                         <a href="#" class="button" data-filter="4" onclick="
                         document.getElementById('ml').style.display = 'block';
                         document.getElementById('opensrc').style.display = 'none';
@@ -398,7 +436,11 @@
                         document.getElementById('cysec').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">DS & ML</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">DS & ML</a>
                         <a href="#" class="button" data-filter="5" onclick="
                         document.getElementById('advaya').style.display = 'block';
                         document.getElementById('opensrc').style.display = 'none';
@@ -406,7 +448,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('cysec').style.display = 'none';
-                        document.getElementById('others').style.display = 'none';">Advaya</a>
+                        document.getElementById('others').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Advaya</a>
                         <!-- <a href="#" class="button" data-filter="6">APP Development</a> -->
                         <a href="#" class="button" data-filter="6" onclick="
                         document.getElementById('others').style.display = 'block';
@@ -415,7 +461,11 @@
                         document.getElementById('ml').style.display = 'none';
                         document.getElementById('hack').style.display = 'none';
                         document.getElementById('advaya').style.display = 'none';
-                        document.getElementById('cysec').style.display = 'none';">Others</a>
+                        document.getElementById('cysec').style.display = 'none';
+                        document.getElementById('h1').style.display = 'none';
+                        document.getElementById('h2').style.display = 'none';
+                        document.getElementById('h3').style.display = 'none';
+                        document.getElementById('h4').style.display = 'none';">Others</a>
                 </div>
             </div>
 
@@ -447,6 +497,13 @@
                 <h2>Others</h2>
             </div>
         </div>
+
+        <div id="h1">
+            <div id="heading">
+                <h2>Aug-Dec 2022</h2>
+            </div>
+        </div>
+        
         <div class="container">
 
             <div class="boxesContainer">
@@ -502,6 +559,12 @@
             </div>
         </div>
 
+        <di id = "h2">
+            <div id="heading">
+                <h2>Jan-May 2022</h2>
+            </div>
+        </di>
+        
         <div class="cardBox filter ">
             <div class="card">
             <div class="front">
@@ -570,6 +633,12 @@
             </div>
         </div>      
 
+        <div id="h3">
+            <div id="heading">
+                <h2>Aug-Dec 2021</h2>
+            </div>
+        </div>
+        
         <div class="cardBox filter 4">
             <div class="card">
             <div class="front">
@@ -621,6 +690,12 @@
             </div>
         </div>
 
+        <div id="h4">
+            <div id="heading">
+                <h2>Jan-Jun 2021</h2>
+            </div>
+        </div>
+        
         <div class="cardBox filter 2">
                 <div class="card">
                 <div class="front">
