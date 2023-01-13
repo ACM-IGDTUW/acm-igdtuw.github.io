@@ -313,6 +313,7 @@ header nav ul li a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 /* ==========
@@ -984,7 +985,7 @@ header nav ul li a {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
   }
   .banner-social img {
     width: 80px;
@@ -1057,7 +1058,7 @@ header nav ul li a {
   }
   .cl-container {
     border-radius: 13px;
-    height: 200px;
+    /* height: 200px; */
     padding: 2em;
     display: -ms-grid;
     display: grid;
