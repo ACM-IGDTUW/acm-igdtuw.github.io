@@ -4,8 +4,8 @@ let header = $(`<div class="nav-container">
   <a class="logo" href="index.html">ACM IGDTUW</a>
   <nav class="nav-itself">
     <ul>
+      <li><a class="nav-li" href="team.html">Our Team</a></li>
       <li><a class="nav-li" href="events.html">Events</a></li>
-      <li><a class="nav-li" href="team.html">About Our Team</a></li>
       <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
     </ul>
   </nav>  
