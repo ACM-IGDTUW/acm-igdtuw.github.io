@@ -1,14 +1,100 @@
 'use strict';
 let header = $(`<div class="nav-container">
 <header>
+<style>
+
+/*=========
+  sidenav
+==========*/
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color:#04021a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #3FE4DB;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #fff;
+}
+ 
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.iconsidenav{
+  visibility: hidden;
+}
+
+@media screen and (max-width: 500px){
+  .nav-li{
+    visibility:hidden;
+    width: 10px;
+  }
+  .iconsidenav{
+  visibility: visible;
+  font-size: 1.5em;
+  transform: translateY(-30%);
+  font-weight: 600;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #3FE4DB;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.iconsidenav:hover{
+  color: #fff;
+}
+}</style>
   <a class="logo" href="index.html">ACM IGDTUW</a>
   <nav class="nav-itself">
     <ul>
       <li><a class="nav-li" href="team.html">Our Team</a></li>
       <li><a class="nav-li" href="events.html">Events</a></li>
       <li><a class="nav-li" href="emp.html">Past Workshops</a></li>
+      <li><div class="iconsidenav"><span onclick="openNav()">&#9776;</span></div></li>
     </ul>
-  </nav>  
+  </nav>
+  <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="emp.html">Past Workshops</a></li>
+            <li><a href="Message.html">Message</a></li>
+          </ul>
+        </div>
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>  
 </header>
 </div>`)
 
