@@ -1401,13 +1401,13 @@ header nav ul li a {
 }
 
 #wrappervideo{
-  max-width: 100px;
+  min-width: 100px;
   max-height: 100px;
 }
 
 }
 
-@media (max-width: 350px){
+@media (max-width: 340px){
 
 .videostyle{
   width: 140px;
